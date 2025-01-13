@@ -8,8 +8,9 @@ public class Cinema {
     public static void main(String[] args) {
 
   TextUI textUI = new TextUI();
-  textUI.start();
-
+  TicketService ticketService = new TicketService();
+ // textUI.start();
+        ticketService.initCounting();
 
     }
 }
