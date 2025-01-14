@@ -1,17 +1,25 @@
 package cinema;
 
 
-
+import java.util.Scanner;
 
 public class Cinema {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        MainMenuStrategyProvider provider = new MainMenuStrategyProvider();
+        TicketService ticketService = new TicketService();
+        Board board = ticketService.createBoard();
+        while (true) {
 
-  TextUI textUI = new TextUI();
-  TicketService ticketService = new TicketService();
-  Board board = ticketService.createBoard();
-        ticketService.initCounting(board);
+            provider.printMenu();
+            int numberFromMenu = scanner.nextInt();
+            boolean flag = provider.executeProvider(numberFromMenu, board);
 
+            if (flag) {
+                break;
+            }
+        }
     }
 }

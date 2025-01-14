@@ -19,30 +19,28 @@ public class TicketService {
 
         TextUI textUI = new TextUI();
         Board board = new Board(rows, col);
-        textUI.printRoom(board);
         return board;
+
+
     }
+    public void printRoom(Board board) {
 
-    public void initCounting(Board board) {
-        System.out.println("Enter a row number:");
-        int row = scanner.nextInt();
-        ;
-        System.out.println("Enter a seat number in that row:");
-        int col = scanner.nextInt();
+        System.out.println("Cinema:");
 
-
-        if (row <= 4) {
-            ticketPrice = 10;
-            System.out.println("Ticket price: " + "$" + ticketPrice);
-        } else {
-            ticketPrice = 8;
-            System.out.println("Ticket price: " + "$" + ticketPrice);
+        for (int i = 1; i<= board.getCol(); ++i){
+            System.out.print(" "+i);
         }
         System.out.println();
-        TextUI textUI = new TextUI();
-        board.getSeats()[row-1][col-1]='B';
-        textUI.printRoom(board);
+
+        for(int i = 0; i<board.getRow(); ++i){
+            System.out.print(i+1);
+            for (int j = 0; j< board.getCol(); ++j){
+                System.out.print(" " + board.getSeats()[i][j]);
+            }
+            System.out.println();
+        }
 
     }
+
 }
 

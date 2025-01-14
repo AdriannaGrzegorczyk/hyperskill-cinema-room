@@ -1,10 +1,14 @@
 package cinema;
 
-import java.util.Arrays;
+public class SeatsStrategy extends MenuStrategy{
 
-public class TextUI {
 
-    public static void printRoom(Board board) {
+    public SeatsStrategy (int order, String operationName){
+        super(order, operationName);
+    }
+
+    @Override
+    boolean executeStrategy(Board board) {
 
         System.out.println("Cinema:");
 
@@ -21,6 +25,7 @@ public class TextUI {
             System.out.println();
         }
 
-    }
 
+        return false;
+    }
 }
