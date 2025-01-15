@@ -15,13 +15,6 @@ public abstract class MenuStrategy {
 
     }
 
-    public int getOrder() {
-        return order;
-    }
-
-    public String getOperationName() {
-        return operationName;
-    }
 
     abstract boolean executeStrategy(Board board);
 

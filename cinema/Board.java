@@ -5,25 +5,25 @@ import java.util.Scanner;
 
 public class Board {
 
+    static final char OCCUPIED_SEAT = 'B';
+    static final char FREE_SEAT = 'S';
     private final char[][] seats;
-    public  int row;
-    public int col;
-    public int currentIncome =0;
+    private int row;
+    private int col;
+    private int currentIncome = 0;
 
-    public Board (){
-
+    public Board() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of rows:");
         int rows = scanner.nextInt();
-
         System.out.println("Enter the number of seats in each row:");
         int col = scanner.nextInt();
 
-        this.col= col;
-        this.row=rows;
+        this.col = col;
+        this.row = rows;
         this.seats = new char[row][col];
-        for (char [] rowArr : seats){
-            Arrays.fill(rowArr,'S');
+        for (char[] rowArr : seats) {
+            Arrays.fill(rowArr, FREE_SEAT);
         }
 
     }
@@ -36,15 +36,15 @@ public class Board {
         return col;
     }
 
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public void setCol(int col) {
-        this.col = col;
+    public int getCurrentIncome() {
+        return currentIncome;
     }
 
     public char[][] getSeats() {
         return seats;
+    }
+
+    public void setCurrentIncome(int currentIncome) {
+        this.currentIncome = currentIncome;
     }
 }
