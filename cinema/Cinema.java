@@ -9,8 +9,8 @@ public class Cinema {
 
         Scanner scanner = new Scanner(System.in);
         MainMenuStrategyProvider provider = new MainMenuStrategyProvider();
-        TicketService ticketService = new TicketService();
-        Board board = ticketService.createBoard();
+
+        Board board = new Board();
         while (true) {
 
             provider.printMenu();

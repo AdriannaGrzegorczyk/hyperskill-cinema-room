@@ -1,22 +1,33 @@
 package cinema;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Board {
 
     private final char[][] seats;
     public  int row;
     public int col;
+    public int currentIncome =0;
 
+    public Board (){
 
-    public Board (int row, int col){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of rows:");
+        int rows = scanner.nextInt();
+
+        System.out.println("Enter the number of seats in each row:");
+        int col = scanner.nextInt();
+
         this.col= col;
-        this.row=row;
+        this.row=rows;
         this.seats = new char[row][col];
         for (char [] rowArr : seats){
             Arrays.fill(rowArr,'S');
         }
+
     }
+
     public int getRow() {
         return row;
     }

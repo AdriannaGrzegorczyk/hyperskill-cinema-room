@@ -9,6 +9,7 @@ public class MainMenuStrategyProvider {
     List<MenuStrategy> options = List.of(
             new SeatsStrategy(1,"Show the seats"),
             new TicketStrategy(2, "Buy a ticket"),
+            new StatisticStrategy(3,"Statistics"),
             new BackStrategy(0, "Exit")
     );
 

@@ -1,8 +1,6 @@
 package cinema;
 
-import java.util.Arrays;
-
-public class TextUI {
+public class CinemaUI {
 
     public static void printRoom(Board board) {
 
