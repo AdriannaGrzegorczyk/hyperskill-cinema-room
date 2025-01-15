@@ -1,5 +1,3 @@
-package cinema;
-
 import java.awt.*;
 
 public abstract class MenuStrategy {

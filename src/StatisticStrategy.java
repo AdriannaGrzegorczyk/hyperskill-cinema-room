@@ -1,5 +1,3 @@
-package cinema;
-
 public class StatisticStrategy extends MenuStrategy {
 
     public StatisticStrategy(int order, String operationName) {
