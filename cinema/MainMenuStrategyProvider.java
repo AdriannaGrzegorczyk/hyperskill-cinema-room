@@ -23,8 +23,9 @@ public class MainMenuStrategyProvider {
         Optional<MenuStrategy> optional = options.stream().filter(x-> x.order == numberFromMenu).findFirst();
 
         if (optional.isPresent()) {
-
+            System.out.println();
             return optional.get().executeStrategy(board);
+
         }else{
             return false;
         }

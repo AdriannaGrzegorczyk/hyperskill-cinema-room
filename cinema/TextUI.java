@@ -20,7 +20,7 @@ public class TextUI {
             }
             System.out.println();
         }
-
+        System.out.println();
     }
 
 }

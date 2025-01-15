@@ -16,7 +16,6 @@ public class SeatsStrategy extends MenuStrategy{
             System.out.print(" "+i);
         }
         System.out.println();
-
         for(int i = 0; i<board.getRow(); ++i){
             System.out.print(i+1);
             for (int j = 0; j< board.getCol(); ++j){
@@ -24,8 +23,7 @@ public class SeatsStrategy extends MenuStrategy{
             }
             System.out.println();
         }
-
-
+        System.out.println();
         return false;
     }
 }
